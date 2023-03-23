@@ -5,7 +5,9 @@ namespace BigData.HeadHunter.EFCore;
 
 public partial class DictionaryValue
 {
-    public string Id { get; set; } = null!;
+    public long Id { get; set; }
+
+    public string ValueId { get; set; } = null!;
 
     public string? Name { get; set; }
 

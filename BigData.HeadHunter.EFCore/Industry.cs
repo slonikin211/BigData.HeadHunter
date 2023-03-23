@@ -9,5 +9,5 @@ public partial class Industry
 
     public string Name { get; set; } = null!;
 
-    public long? ParentId { get; set; }
+    public double? ParentId { get; set; }
 }

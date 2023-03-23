@@ -53,6 +53,8 @@ public partial class HhContext : DbContext
         {
             entity.ToTable("Dictionary.Values");
 
+            entity.Property(e => e.Id).ValueGeneratedNever();
+
             entity.HasOne(d => d.Key).WithMany(p => p.DictionaryValues)
                 .HasForeignKey(d => d.KeyId)
                 .OnDelete(DeleteBehavior.ClientSetNull);
