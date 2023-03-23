@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace BigData.HeadHunter.API
 {
-    internal class Base
+    public abstract class Base
     {
-        public EFCore.HeadHunter DbContext;
+        public EFCore.HhContext dbContext;
 
-        public HttpClient HttpClient = null!;
+        public HttpClient client = null!;
 
         public Base() 
         {
-            HttpClient = new HttpClient();
-            DbContext = new EFCore.HeadHunter();
+            client = new HttpClient();
+            dbContext = new EFCore.HhContext();
         }
 
         public HttpRequestMessage PreparedRequest(HttpMethod method, string url)
@@ -29,5 +29,9 @@ namespace BigData.HeadHunter.API
 
             return request;
         }
+
+        public abstract HttpResponseMessage DoRequest();
+
+        public abstract bool HandleResponse(HttpResponseMessage message);
     }
 }

@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BigData.HeadHunter.API\BigData.HeadHunter.API.csproj" />
+  </ItemGroup>
+
 </Project>
