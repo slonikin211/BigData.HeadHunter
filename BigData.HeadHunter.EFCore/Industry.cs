@@ -10,4 +10,6 @@ public partial class Industry
     public string Name { get; set; } = null!;
 
     public double? ParentId { get; set; }
+
+    public virtual ICollection<EmployerIndustry> EmployerIndustries { get; } = new List<EmployerIndustry>();
 }

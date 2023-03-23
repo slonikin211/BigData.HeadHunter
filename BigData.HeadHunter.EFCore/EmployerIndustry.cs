@@ -5,6 +5,8 @@ namespace BigData.HeadHunter.EFCore;
 
 public partial class EmployerIndustry
 {
+    public long Id { get; set; }
+
     public long EmployerId { get; set; }
 
     public double IndustryId { get; set; }

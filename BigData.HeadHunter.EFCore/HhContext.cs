@@ -73,15 +73,13 @@ public partial class HhContext : DbContext
 
         modelBuilder.Entity<EmployerIndustry>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("Employer.Industries");
+            entity.ToTable("Employer.Industries");
 
-            entity.HasOne(d => d.Employer).WithMany()
+            entity.HasOne(d => d.Employer).WithMany(p => p.EmployerIndustries)
                 .HasForeignKey(d => d.EmployerId)
                 .OnDelete(DeleteBehavior.ClientSetNull);
 
-            entity.HasOne(d => d.Industry).WithMany()
+            entity.HasOne(d => d.Industry).WithMany(p => p.EmployerIndustries)
                 .HasForeignKey(d => d.IndustryId)
                 .OnDelete(DeleteBehavior.ClientSetNull);
         });

@@ -29,7 +29,16 @@ Console.WriteLine("Program Started");
 
     //var response = handler.DoRequest();
     //var resultStatus = handler.HandleResponse(response);
-    //Console.WriteLine($"GetIndustries result status: {resultStatus}");
+    //Console.WriteLine($"GetDictionaries result status: {resultStatus}");
+}
+
+// Employer
+{
+    //GetEmployers handler = new();
+
+    //var response = handler.DoRequestById(988247);
+    //var resultStatus = handler.HandleResponse(response);
+    //Console.WriteLine($"GetEmployers result status: {resultStatus}");
 }
 
 Console.WriteLine("Program Finished");

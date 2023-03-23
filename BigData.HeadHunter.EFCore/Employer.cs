@@ -15,5 +15,7 @@ public partial class Employer
 
     public virtual Area? Area { get; set; }
 
+    public virtual ICollection<EmployerIndustry> EmployerIndustries { get; } = new List<EmployerIndustry>();
+
     public virtual ICollection<Vacancy> Vacancies { get; } = new List<Vacancy>();
 }
