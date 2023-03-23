@@ -20,5 +20,14 @@ namespace BigData.HeadHunter.API
             HttpClient = new HttpClient();
             DbContext = new EFCore.HeadHunter();
         }
+
+        public HttpRequestMessage PreparedRequest(HttpMethod method, string url)
+        {
+            var request = new HttpRequestMessage(method, url);
+
+            request.Headers.Add("User-Agent", "MyTestApp/1.0 (georgepark.dev@gmail.com)");
+
+            return request;
+        }
     }
 }
