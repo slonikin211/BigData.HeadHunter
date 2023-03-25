@@ -56,11 +56,11 @@ namespace BigData.HeadHunter.API
                     areaId = int.Parse(areaObject["id"].ToString());
                 }
 
-                var industriesIds = new List<float>();
+                var industriesIds = new List<string>();
                 var industries = JsonDocument.Parse(data["industries"].ToString());
                 foreach (var industry in industries.RootElement.EnumerateArray())
                 {
-                    var industryId = float.Parse(industry.GetProperty("id").ToString());
+                    var industryId = industry.GetProperty("id").ToString();
                     industriesIds.Add(industryId);
                 }
 

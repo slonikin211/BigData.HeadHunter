@@ -9,7 +9,7 @@ public partial class EmployerIndustry
 
     public long EmployerId { get; set; }
 
-    public double IndustryId { get; set; }
+    public string IndustryId { get; set; } = null!;
 
     public virtual Employer Employer { get; set; } = null!;
 

@@ -38,7 +38,7 @@ namespace BigData.HeadHunter.API
             {
                 foreach (var industry in data)
                 {
-                    var mainId = float.Parse(industry["id"].ToString());
+                    var mainId = industry["id"].ToString();
                     var mainName = industry["name"].ToString();
 
                     dbContext.Industries.Add(new Industry
@@ -49,7 +49,7 @@ namespace BigData.HeadHunter.API
 
                     foreach (var jobField in industry["industries"].AsArray())
                     {
-                        var id = float.Parse(jobField["id"].ToString());
+                        var id = jobField["id"].ToString();
                         var name = jobField["name"].ToString();
                         var parentId = mainId;
 

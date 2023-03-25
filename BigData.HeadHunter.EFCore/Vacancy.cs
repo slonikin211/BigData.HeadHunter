@@ -13,9 +13,9 @@ public partial class Vacancy
 
     public long? SalaryTo { get; set; }
 
-    public string SalaryCurrency { get; set; } = null!;
+    public string? SalaryCurrency { get; set; }
 
-    public long SalaryGross { get; set; }
+    public long? SalaryGross { get; set; }
 
     public long? AreaId { get; set; }
 
@@ -25,9 +25,9 @@ public partial class Vacancy
 
     public string? CreatedDate { get; set; }
 
-    public long EmployerId { get; set; }
+    public long? EmployerId { get; set; }
 
     public virtual Area? Area { get; set; }
 
-    public virtual Employer Employer { get; set; } = null!;
+    public virtual Employer? Employer { get; set; }
 }

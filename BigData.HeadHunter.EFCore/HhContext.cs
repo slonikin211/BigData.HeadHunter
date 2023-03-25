@@ -98,15 +98,15 @@ public partial class HhContext : DbContext
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.SalaryCurrency).HasColumnName("Salary.Currency");
             entity.Property(e => e.SalaryFrom).HasColumnName("Salary.From");
-            entity.Property(e => e.SalaryGross).HasColumnName("Salary.Gross");
+            entity.Property(e => e.SalaryGross)
+                .HasDefaultValueSql("0")
+                .HasColumnName("Salary.Gross");
             entity.Property(e => e.SalaryTo).HasColumnName("Salary.To");
             entity.Property(e => e.Url).HasColumnName("URL");
 
             entity.HasOne(d => d.Area).WithMany(p => p.Vacancies).HasForeignKey(d => d.AreaId);
 
-            entity.HasOne(d => d.Employer).WithMany(p => p.Vacancies)
-                .HasForeignKey(d => d.EmployerId)
-                .OnDelete(DeleteBehavior.ClientSetNull);
+            entity.HasOne(d => d.Employer).WithMany(p => p.Vacancies).HasForeignKey(d => d.EmployerId);
         });
 
         OnModelCreatingPartial(modelBuilder);
