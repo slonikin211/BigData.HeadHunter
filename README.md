@@ -53,7 +53,6 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #### Areas
 Заполнение Areas
 ```cs
-// Areas
     GetAreas handler = new();
 
     var response = handler.DoRequest();
@@ -64,7 +63,6 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #### Industries
 Заполнение Industries
 ```cs
-// Areas
     GetIndustries handler = new();
 
     var response = handler.DoRequest();
@@ -75,7 +73,6 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #### Dictionaries
 Заполнение Dictionaries
 ```cs
-// Areas
     GetDictionaries handler = new();
 
     var response = handler.DoRequest();

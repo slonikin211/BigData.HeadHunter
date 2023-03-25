@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigData.HeadHunter.EFCore", "BigData.HeadHunter.EFCore\BigData.HeadHunter.EFCore.csproj", "{918D8802-3EA4-4901-8AD1-927F1041FEBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigData.HeadHunter.EFCore", "BigData.HeadHunter.EFCore\BigData.HeadHunter.EFCore.csproj", "{918D8802-3EA4-4901-8AD1-927F1041FEBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigData.HeadHunter.API", "BigData.HeadHunter.API\BigData.HeadHunter.API.csproj", "{6F858970-2F09-42E5-8E85-3A76BA34F2BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigData.HeadHunter.API", "BigData.HeadHunter.API\BigData.HeadHunter.API.csproj", "{6F858970-2F09-42E5-8E85-3A76BA34F2BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigData.HeadHunter.Console", "BigData.HeadHunter.Console\BigData.HeadHunter.Console.csproj", "{81AC4AE5-1688-4C3C-8322-D0C7D52E5276}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BigData.HeadHunter.Console", "BigData.HeadHunter.Console\BigData.HeadHunter.Console.csproj", "{81AC4AE5-1688-4C3C-8322-D0C7D52E5276}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1C4491C5-BF48-4AF1-8A3E-E609D1ED5FEA}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
